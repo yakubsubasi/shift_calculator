@@ -4,14 +4,14 @@ import 'package:shift_calculator/main.dart';
 import '../model/shift_model.dart';
 
 class ShiftController extends ChangeNotifier {
-  int numberOfWorkers = 5;
+  int numberOfWorkers = 0;
 
   set setNumberOfWorkers(int value) {
     numberOfWorkers = value;
     notifyListeners();
   }
 
-  int numberOfWorkingPlaces = 3;
+  int numberOfWorkingPlaces = 0;
 
   set setNumberOfWorkingPlaces(int value) {
     numberOfWorkingPlaces = value;
@@ -19,6 +19,8 @@ class ShiftController extends ChangeNotifier {
   }
 
   List<String> workers = [];
+
+  List<String> workingPlaces = [];
 
   Shift shift = Shift(
     startTime: DateTime(2022, 1, 1, 8, 30),
@@ -37,6 +39,11 @@ class ShiftController extends ChangeNotifier {
 
   void setWorkerName(int index, String value) {
     workers[index] = value;
+    notifyListeners();
+  }
+
+  void setWorkingPlaceName(int index, String value) {
+    workingPlaces[index] = value;
     notifyListeners();
   }
 }

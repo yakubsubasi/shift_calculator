@@ -49,7 +49,7 @@ class _WorkerNameFormState extends State<WorkerNameForm> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'İsimleri giriniz',
+              'Çalışan isimleri giriniz',
               style: Theme.of(context)
                   .textTheme
                   .headline4
@@ -99,7 +99,7 @@ class _WorkerNameFormState extends State<WorkerNameForm> {
                         .any((element) => element == '')
                     ? _submit
                     : null,
-                child: Text('       Devam        '),
+                child: Text('Devam'),
               ),
             ),
           ],

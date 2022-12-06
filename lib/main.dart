@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shift_calculator/state/shift_state.dart';
+import 'package:shift_calculator/view/pages/main_landing_page.dart';
 
-import 'package:shift_calculator/view/initial_page.dart';
+import 'package:shift_calculator/view/pages/shift_table_page.dart';
 
-import 'package:shift_calculator/view/naming_page_2.dart';
-import 'package:shift_calculator/view/shift_table_page.dart';
+import 'view/pages/first_form_page.dart';
+import 'view/pages/naming_page.dart';
+import 'view/pages/second_form_page.dart';
 
 void main() {
   runApp(MultiProvider(providers: [
@@ -22,7 +24,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
-        '/': (context) => InitialPage(),
+        '/': (context) => MainLandingPage(),
+        'first': (context) => FirstFormPage(),
+        'second': (context) => SecondFormPage(),
         'naming': (context) => NamingPage(),
         'shift': (context) => ShiftTablePage(),
       },
